@@ -1,0 +1,97 @@
+{
+  "week": "260220",
+  "generated_at": "2026-02-21 17:02:49",
+  "agent1_feedback": {
+    "add_features": [],
+    "remove_features": [],
+    "data_quality_issues": [
+      "備考: NaN率 93.3% → データ取得精度の確認推奨",
+      "price_1130_note: NaN率 91.2% → データ取得精度の確認推奨",
+      "net_debt_m: NaN率 64.8% → データ取得精度の確認推奨",
+      "rd_expense_m: NaN率 82.9% → データ取得精度の確認推奨",
+      "rd_to_sales: NaN率 83.0% → データ取得精度の確認推奨"
+    ]
+  },
+  "agent2_feedback": {
+    "target_1130_close": {
+      "recommended_model": "lgbm_classification",
+      "switch_to_classification": true,
+      "feature_importance_hints": {
+        "top_features": [
+          "capex_m",
+          "発表曜日",
+          "純利益修正率(%)",
+          "roe",
+          "ma200"
+        ],
+        "low_importance": []
+      },
+      "hyperparameter_hints": {
+        "xgb_n_estimators": 295,
+        "xgb_max_depth": 4,
+        "xgb_learning_rate": 0.011445248964830693,
+        "xgb_subsample": 0.979116793722948,
+        "xgb_colsample_bytree": 0.8466992132593212
+      }
+    },
+    "target_1230_close": {
+      "recommended_model": "lgbm_classification",
+      "switch_to_classification": true,
+      "feature_importance_hints": {
+        "top_features": [
+          "週内累積銘柄数",
+          "cash_m",
+          "total_debt_m",
+          "経常修正率(%)",
+          "profit_margin"
+        ],
+        "low_importance": []
+      },
+      "hyperparameter_hints": {
+        "rf_n_estimators": 227,
+        "rf_max_depth": 13,
+        "rf_min_samples_leaf": 1
+      }
+    },
+    "target_1130_nextopen": {
+      "recommended_model": "xgb_classification",
+      "switch_to_classification": true,
+      "feature_importance_hints": {
+        "top_features": [
+          "pbr",
+          "週内累積銘柄数",
+          "beta",
+          "shares_outstanding",
+          "payout_ratio"
+        ],
+        "low_importance": []
+      },
+      "hyperparameter_hints": {
+        "catboost_n_estimators": 124,
+        "catboost_depth": 3,
+        "catboost_learning_rate": 0.2623848980973627
+      }
+    },
+    "target_1230_nextopen": {
+      "recommended_model": "rf_classification",
+      "switch_to_classification": true,
+      "feature_importance_hints": {
+        "top_features": [
+          "pbr",
+          "avg_volume",
+          "cash_m",
+          "working_capital_m",
+          "roe"
+        ],
+        "low_importance": []
+      },
+      "hyperparameter_hints": {
+        "rf_n_estimators": 296,
+        "rf_max_depth": 13,
+        "rf_min_samples_leaf": 4
+      }
+    },
+    "best_target": "target_1130_close"
+  },
+  "general_notes": "週 260220 の自動分析完了。 ベストターゲット: 11:30→終値（target_1130_close）。 モード内訳: 分類 4 ターゲット / 回帰 0 ターゲット。 平均方向一致率: 50.1%。 精度は改善傾向だが分類閾値未満。週数蓄積と特徴量エンジニアリングを並行して進めること。"
+}

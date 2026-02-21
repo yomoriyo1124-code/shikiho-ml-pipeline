@@ -1,0 +1,212 @@
+{
+  "week": "260220",
+  "best_target": "target_1130_close",
+  "targets": {
+    "target_1130_close": {
+      "model": "xgb",
+      "mode": "classification",
+      "mae": null,
+      "direction_accuracy": 0.5266234924754104,
+      "f1_macro": 0.2986598757860632,
+      "best_params": {
+        "n_estimators": 295,
+        "max_depth": 4,
+        "learning_rate": 0.011445248964830693,
+        "subsample": 0.979116793722948,
+        "colsample_bytree": 0.8466992132593212
+      },
+      "top_features": {
+        "capex_m": 2.961917780339718,
+        "発表曜日": 2.8200799599289894,
+        "純利益修正率(%)": 2.7735790237784386,
+        "roe": 2.6495009660720825,
+        "ma200": 2.644590102136135,
+        "debt_to_equity": 2.614513412117958,
+        "sector": 2.517516538500786,
+        "equity_ratio_approx": 2.424461953341961,
+        "修正幅_絶対値": 2.389710396528244,
+        "rd_to_sales": 2.3576540872454643,
+        "週内累積銘柄数": 2.2575097158551216,
+        "pbr": 2.2061120718717575,
+        "dividend_rate": 2.1826455369591713,
+        "ma50": 2.1671662107110023,
+        "free_cf_m": 2.0926302298903465
+      },
+      "all_models_reg": {
+        "ridge": {
+          "mae": 10.41931481630749,
+          "direction_accuracy": 0.5401633513676334
+        },
+        "rf": {
+          "mae": 1.172239138582666,
+          "direction_accuracy": 0.4811061552185548
+        },
+        "lgbm": {
+          "mae": 1.0551673878908423,
+          "direction_accuracy": 0.5266234924754104
+        },
+        "xgb": {
+          "mae": 1.3358046023592578,
+          "direction_accuracy": 0.44657576143749206
+        },
+        "catboost": {
+          "mae": 1.0968334981705263,
+          "direction_accuracy": 0.4595345065282621
+        }
+      }
+    },
+    "target_1230_close": {
+      "model": "rf",
+      "mode": "classification",
+      "mae": null,
+      "direction_accuracy": 0.5001573270618767,
+      "f1_macro": 0.18856306765299014,
+      "best_params": {
+        "n_estimators": 227,
+        "max_depth": 13,
+        "min_samples_leaf": 1
+      },
+      "top_features": {
+        "週内累積銘柄数": 3.0084724329169803,
+        "cash_m": 2.784389183093992,
+        "total_debt_m": 2.7609477452028077,
+        "経常修正率(%)": 2.743736103384749,
+        "profit_margin": 2.5708438038386743,
+        "純利益修正率(%)": 2.425413788420445,
+        "dividend_rate": 2.413090252604484,
+        "working_capital_m": 2.4060677780322304,
+        "時価総額(億円)": 2.39026889762452,
+        "時価総額_log": 2.376514613223528,
+        "beta": 2.3505989870624857,
+        "week52_low": 2.316992750690175,
+        "operating_margin": 2.3019481894947553,
+        "gross_margin": 2.270134263727448,
+        "dividend_yield": 2.242638029749527
+      },
+      "all_models_reg": {
+        "ridge": {
+          "mae": 12.532246787035255,
+          "direction_accuracy": 0.5399715003996896
+        },
+        "rf": {
+          "mae": 1.1421676845047908,
+          "direction_accuracy": 0.4071749481562149
+        },
+        "lgbm": {
+          "mae": 1.0618223467592713,
+          "direction_accuracy": 0.5001573270618767
+        },
+        "xgb": {
+          "mae": 1.1610826472312383,
+          "direction_accuracy": 0.44876443805971017
+        },
+        "catboost": {
+          "mae": 1.0701824885584927,
+          "direction_accuracy": 0.42327791744384075
+        }
+      }
+    },
+    "target_1130_nextopen": {
+      "model": "catboost",
+      "mode": "classification",
+      "mae": null,
+      "direction_accuracy": 0.4972123683631266,
+      "f1_macro": 0.172622285574268,
+      "best_params": {
+        "n_estimators": 124,
+        "depth": 3,
+        "learning_rate": 0.2623848980973627
+      },
+      "top_features": {
+        "pbr": 5.796105292395201,
+        "週内累積銘柄数": 5.695082274175361,
+        "beta": 4.753972727120839,
+        "shares_outstanding": 4.088230953238785,
+        "payout_ratio": 3.634349954635205,
+        "revenue_growth": 3.495443774748578,
+        "financing_cf_m": 2.914152640057834,
+        "修正方向_経常": 2.859812086765166,
+        "時価総額(億円)": 2.744643865697129,
+        "roe": 2.689587017950223,
+        "gross_margin": 2.6139908887886936,
+        "dividend_yield": 2.5899006562644504,
+        "avg_volume_10d": 2.5413560425125428,
+        "week52_low": 2.4280992495347697,
+        "修正幅_絶対値": 2.3785018819005113
+      },
+      "all_models_reg": {
+        "ridge": {
+          "mae": 7.381356553393968,
+          "direction_accuracy": 0.5646642028800816
+        },
+        "rf": {
+          "mae": 1.4098219233689773,
+          "direction_accuracy": 0.45242906959231666
+        },
+        "lgbm": {
+          "mae": 1.4530839931217616,
+          "direction_accuracy": 0.3894111241122838
+        },
+        "xgb": {
+          "mae": 1.552501708643745,
+          "direction_accuracy": 0.5088610586558847
+        },
+        "catboost": {
+          "mae": 1.3336845741598435,
+          "direction_accuracy": 0.4972123683631266
+        }
+      }
+    },
+    "target_1230_nextopen": {
+      "model": "rf",
+      "mode": "classification",
+      "mae": null,
+      "direction_accuracy": 0.4784285830137748,
+      "f1_macro": 0.18098273981791382,
+      "best_params": {
+        "n_estimators": 296,
+        "max_depth": 13,
+        "min_samples_leaf": 4
+      },
+      "top_features": {
+        "pbr": 3.1611987382399453,
+        "avg_volume": 3.020500081673517,
+        "cash_m": 2.799236780035269,
+        "working_capital_m": 2.6703295269277407,
+        "roe": 2.6662014750603564,
+        "avg_volume_10d": 2.6657867914626747,
+        "net_assets_m": 2.6617814818639944,
+        "total_debt_m": 2.6612912024699296,
+        "時価総額_log": 2.6447407423321483,
+        "market_cap": 2.6230026607730816,
+        "beta": 2.6136520221291466,
+        "payout_ratio": 2.5740855034103123,
+        "gross_margin": 2.567226018033707,
+        "dividend_yield": 2.5123506923021175,
+        "float_shares": 2.494307966210594
+      },
+      "all_models_reg": {
+        "ridge": {
+          "mae": 10.504840237297131,
+          "direction_accuracy": 0.539316241296616
+        },
+        "rf": {
+          "mae": 1.3388736340873755,
+          "direction_accuracy": 0.48840622357125485
+        },
+        "lgbm": {
+          "mae": 1.4120358802279978,
+          "direction_accuracy": 0.4474187008352931
+        },
+        "xgb": {
+          "mae": 1.4526769162751374,
+          "direction_accuracy": 0.4471513143413232
+        },
+        "catboost": {
+          "mae": 1.2946291113687642,
+          "direction_accuracy": 0.4784285830137748
+        }
+      }
+    }
+  }
+}

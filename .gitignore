@@ -1,0 +1,24 @@
+# 秘密情報
+.env
+
+# キャッシュ・中間ファイル
+date/processed/edinet_doc_cache.json
+date/processed/edinet_financial_cache.json
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# モデル・大容量データ
+models/*.pkl
+date/processed/*.csv
+
+# 四季報 CSV（著作権データ）
+date/row_date/
+
+# 学習ログ・生成成果物
+catboost_info/
+reports/
+
+# Claude プロジェクト設定（プライベート）
+.claude/
